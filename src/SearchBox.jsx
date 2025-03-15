@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import { useState } from 'react';
 export default function SearchBox({updateInfo}){
   let [city,setCity]=useState("");
-  const API_URL="http://api.openweathermap.org/geo/1.0/direct";
+  const API_URL="https://api.openweathermap.org/geo/1.0/direct";
   const API2="https://api.openweathermap.org/data/2.5/weather"
   const API_KEY="c54aed0121b2726e6d64520f7f97a745";
   let getWeatherInfo = async () => {
