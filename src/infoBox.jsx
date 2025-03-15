@@ -37,12 +37,17 @@ export default function InfoBox({ info }) {
   return (
     <div>
       <div className="cardContainer" style={{ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-        <Card sx={{ maxWidth: 450, minWidth: 300 }}>
-          <CardMedia
-            sx={{ height: 230 }}
-            image={imageUrl}
-            title="Weather"
-          />
+      <Card 
+  sx={{ 
+    maxWidth: { xs: 300, sm: 300, md: 400 }, // Reduce width on phones
+    minWidth: { xs: 150, sm: 250, md: 350 } 
+  }}
+>
+  <CardMedia
+    sx={{ height: 230 }}
+    image={imageUrl}
+    title="Weather"
+  />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {info.name}{info.temp>=30?<WbSunnyIcon></WbSunnyIcon>:info.temp<=10?<AcUnitIcon></AcUnitIcon>:<ThunderstormIcon></ThunderstormIcon>}
