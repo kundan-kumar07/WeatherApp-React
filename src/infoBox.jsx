@@ -33,7 +33,7 @@ export default function InfoBox({ info }) {
       } else if (temp <= 10) {
         setImageUrl(COLD_URL);
         setWeatherIcon(<AcUnitIcon fontSize="large" />);
-      } else if (temp >= 20) {
+      } else if (temp >= 27) {
         setImageUrl(HOT_URL);
         setWeatherIcon(<WbSunnyIcon fontSize="large" />);
       } else if (temp >= 15) {
